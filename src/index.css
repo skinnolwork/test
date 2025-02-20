@@ -7,3 +7,25 @@ body {
   background: radial-gradient(circle at top, #222436, #181a26, #10111a);
   background-attachment: fixed;
 }
+
+
+/* 차분한 모던 스타일 스크롤바 */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px; /* 얇고 깔끔한 스크롤바 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.7); /* 부드러운 다크 그레이 */
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out, width 0.2s ease-in-out;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.9); /* 마우스 오버 시 밝은 그레이 */
+  width: 8px; /* 살짝 두꺼워지면서 강조 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(50, 50, 50, 0.5); /* 트랙 배경을 어두운 톤으로 */
+  border-radius: 10px;
+}

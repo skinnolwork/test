@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { CalibrationModes } from "../data"; // ✅ 공통 데이터 가져오기
 
-const SelectableTabs = ({ options }: { options: string[] }) => {
-  const [selected, setSelected] = useState(options[0]);
+const SelectableTabs = () => {
+  const [selected, setSelected] = useState(CalibrationModes[0]); // ✅ 전역 데이터 사용
 
   return (
     <div className="flex justify-center mt-10">
       <div className="w-fit flex space-x-4 p-2 bg-gray-800 bg-opacity-80 rounded-lg shadow-md">
-        {options.map((option) => (
+        {CalibrationModes.map((option) => (
           <button
             key={option}
             className={`px-10 py-2 rounded-lg transition duration-300 text-gray-300 font-medium 

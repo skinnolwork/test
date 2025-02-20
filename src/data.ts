@@ -1,0 +1,1 @@
+export const CalibrationModes = ["폴리스타이렌", "실리콘", "타이레놀"];

@@ -10,15 +10,15 @@ const Navbar = () => {
   }, [location.pathname]); // 경로 변경될 때마다 선택된 메뉴 업데이트
 
   return (
-    <nav className="fixed top-10 left-20 right-20 bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-md rounded-xl z-50">
+    <nav className="fixed top-10 left-20 right-20 bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md rounded-xl z-50">
       <div className="container mx-auto px-8 py-4 flex justify-between items-center">
         {/* 로고 */}
-        <Link to="/" className="text-2xl font-semibold text-gray-200">
+        <Link to="/individual-analysis" className="text-2xl font-semibold text-gray-200 pl-10">
           SKINNOL.
         </Link>
 
         {/* 메뉴 리스트 */}
-        <div className="flex space-x-4">
+        <div className="flex space-x-12 pr-10">
           <Link
             to="/individual-analysis"
             className={`transition duration-300 ${
