@@ -1,9 +1,18 @@
 import SelectableList from "../components/SelectableList";
-import { useState } from "react"; // ✅ 반드시 컴포넌트 내부에서 사용해야 함
-import { CalibrationModes } from "../data"; // ✅ 공통 데이터 가져오기
+import { useState } from "react";
+import { CalibrationModes } from "../data";
+import { useNavigate } from "react-router-dom";
+import Button from "../components/Button";
 
 const Calibration = () => {
+  const navigate = useNavigate();
   const [selectedCalibration, setSelectedCalibration] = useState<string | null>(null); // ✅ 컴포넌트 내부에서 호출
+
+  const handleCalibration = () => {
+    if (selectedCalibration) {
+      navigate("/Graphs", { state: { selectedCalibration } });
+    }
+  };
 
   return (
     <div className="p-10 text-white">
@@ -15,6 +24,11 @@ const Calibration = () => {
           onSelect={(selected) => setSelectedCalibration(selected[0] || null)}
         />
       </div>
+      <Button 
+        label="캘리브레이션 시작" 
+        onClick={handleCalibration}
+        disabled={!selectedCalibration} 
+      />
     </div>
   );
 };

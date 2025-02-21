@@ -4,6 +4,7 @@ import IndividualAnalysis from "./pages/IndividualAnalysis";
 import ComparisonAnalysis from "./pages/ComparisonAnalysis";
 import CosmeticData from "./pages/CosmeticData";
 import Calibration from "./pages/Calibration";
+import Graphs from "./pages/Graphs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/comparison-analysis" element={<ComparisonAnalysis />} />
           <Route path="/cosmetic-data" element={<CosmeticData />} />
           <Route path="/calibration" element={<Calibration />} />
+          <Route path="/graphs" element={<Graphs />} />
         </Routes>
       </div>
     </Router>

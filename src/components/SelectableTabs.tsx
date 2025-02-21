@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { CalibrationModes } from "../data"; // ✅ 공통 데이터 가져오기
+import { CalibrationModes } from "../data";
 
 const SelectableTabs = () => {
-  const [selected, setSelected] = useState(CalibrationModes[0]); // ✅ 전역 데이터 사용
+  const [selected, setSelected] = useState(CalibrationModes[0]);
 
   return (
     <div className="flex justify-center mt-10">
