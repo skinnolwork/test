@@ -24,7 +24,7 @@ const Graphs = () => {
             <p className="text-gray-400">이미지를 불러올 수 없습니다.</p>
           )}
         </div>
-        
+
         <div className="w-1/2 flex justify-center items-center bg-gray-800 rounded-lg p-4">
           <p className="text-gray-400">여기에 그래프가 들어갈 예정</p>
         </div>
