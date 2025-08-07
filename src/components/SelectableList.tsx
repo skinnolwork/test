@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CalibrationModes } from "../data";
 
 interface SelectableListProps {
   title: string;

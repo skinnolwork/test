@@ -11,37 +11,37 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-10 left-20 right-20 bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-md rounded-xl z-50">
-      <div className="container mx-auto px-8 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-20 py-4 flex justify-between items-center">
         {/* 로고 */}
-        <Link to="/individual-analysis" className="text-2xl font-semibold text-gray-200 pl-10">
+        <Link to="/measurement" className="text-2xl font-semibold text-gray-200 pl-10">
           SKINNOL.
         </Link>
 
         {/* 메뉴 리스트 */}
         <div className="flex space-x-12 pr-10">
           <Link
-            to="/individual-analysis"
+            to="/survey-scan"
             className={`transition duration-300 ${
-              selectedMenu === "/individual-analysis" ? "text-white border-white" : "text-gray-400 hover:text-white"
+              selectedMenu === "/survey-scan" ? "text-white border-white" : "text-gray-400 hover:text-white"
             }`}
           >
-            개별 분석(피부)
+            Survey Scan
           </Link>
           <Link
-            to="/comparison-analysis"
+            to="/measurement"
             className={`transition duration-300 ${
-              selectedMenu === "/comparison-analysis" ? "text-white border-white" : "text-gray-400 hover:text-white"
+              selectedMenu === "/measurement" ? "text-white border-white" : "text-gray-400 hover:text-white"
             }`}
           >
-            비교 분석
+            Measurement
           </Link>
           <Link
-            to="/cosmetic-data"
+            to="/analysis"
             className={`transition duration-300 ${
-              selectedMenu === "/cosmetic-data" ? "text-white border-white" : "text-gray-400 hover:text-white"
+              selectedMenu === "/analysis" ? "text-white border-white" : "text-gray-400 hover:text-white"
             }`}
           >
-            화장품 데이터
+            Analysis
           </Link>
           <Link
             to="/calibration"
@@ -49,7 +49,7 @@ const Navbar = () => {
               selectedMenu === "/calibration" ? "text-white border-white" : "text-gray-400 hover:text-white"
             }`}
           >
-            캘리브레이션
+            Calibration
           </Link>
         </div>
       </div>

@@ -1,10 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import IndividualAnalysis from "./pages/IndividualAnalysis";
-import ComparisonAnalysis from "./pages/ComparisonAnalysis";
-import CosmeticData from "./pages/CosmeticData";
-import Calibration from "./pages/Calibration";
-import Graphs from "./pages/Graphs";
+import Measurement from "./pages/Measurement/Measurement";
+import SurveyScan from "./pages/SurveyScan/SurveyScan";
+import Analysis from "./pages/Analysis/Analysis";
+import Calibration from "./pages/Calibration/Calibration";
 
 function App() {
   return (
@@ -12,11 +11,11 @@ function App() {
       <Navbar />
       <div className="pt-16">
         <Routes>
-          <Route path="/individual-analysis" element={<IndividualAnalysis />} />
-          <Route path="/comparison-analysis" element={<ComparisonAnalysis />} />
-          <Route path="/cosmetic-data" element={<CosmeticData />} />
+          <Route path="/" element={<SurveyScan />} />
+          <Route path="/survey-scan" element={<SurveyScan />} />
+          <Route path="/measurement" element={<Measurement />} />
+          <Route path="/analysis" element={<Analysis />} />
           <Route path="/calibration" element={<Calibration />} />
-          <Route path="/graphs" element={<Graphs />} />
         </Routes>
       </div>
     </Router>

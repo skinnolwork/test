@@ -3,19 +3,40 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "electron/main.cjs",
+  "build": {
+    "appId": "com.yourname.yourapp",
+    "productName": "SkinnolApp",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "dist/**",
+      "electron/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "electron ."
   },
   "dependencies": {
     "axios": "^1.7.9",
+    "chart.js": "^4.5.0",
+    "chartjs-plugin-annotation": "^3.1.0",
     "papaparse": "^5.5.2",
     "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
-    "uplot": "^1.6.31"
+    "recharts": "^2.15.2",
+    "uplot": "^1.6.32"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
@@ -23,6 +44,8 @@
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
+    "electron": "^37.2.1",
+    "electron-builder": "^26.0.12",
     "eslint": "^9.20.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
